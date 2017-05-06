@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+  <script src="../vue.js"></script>
+</head>
+<body>
+
+  <div id="todo">
+    <h1>My Todos</h1>
+    <!-- v-**で関連付け -->
+    <div v-repeat="t :todos | orderBy 'isDone'">
+      <input type="checkbox" v-model="t.isDone" />
+      <!-- 変数を配置 -->
+      {{$index}}:{{t.content}}
+    </div>
+    <input type="text" v-model="input" value="">
+    <input type="botton" v-on="click:addTodo" value="add todo" />
+    <div>
+      left {{lefts}} tasks.
+    </div>
+  </div>
+
+
+
+</body>
+</html>
