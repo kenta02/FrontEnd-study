@@ -18,6 +18,10 @@ h1 {
   grid-area: title;
   background: #faa;
   border-radius: 10px 10px 0 0;
+  /*font-size: 40px;*/
+  font-size: 16px;
+  /*font-weight:bold;*/
+  font-weight: normal;
 }
 main {
   grid-area: main;
