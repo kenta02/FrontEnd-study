@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>モーダルウィンドウ</title>
+</head>
+<body>
+
+  <header>
+    <h1>モーダルウィンドウ</h1>
+  </header>
+
+  <div class="container">
+
+    <button class="btn js-show-modal">Show Modal</button>
+
+    <div class="modal js-modal-content">
+      <h2>サンプルタイトル</h2>
+      <p>モーダルウィンドウの練習。閉じるボタンを押すとこの表示は消えます。</p>
+      <button class="btn btn-close js-hide-modal">閉じる</button>
+    </div>
+
+    <div class="cover js-show-modal-cover"></div>
+
+
+  </div>
+  <!-- container -->
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js">
+
+  </script>
+  <script type="text/javascript" src="js/app.js">
+  </script>
+
+</body>
+</html>
