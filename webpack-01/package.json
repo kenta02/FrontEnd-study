@@ -1,0 +1,16 @@
+{
+    "name": "webpack-01",
+    "version": "1.0.0",
+    "description": "webpack-starter",
+    "main": "index.js",
+    "scripts": {
+        "dev": "webpack -d --watch",
+        "prod": "webpack -p --watch"
+
+    },
+    "author": "kenta",
+    "license": "ISC",
+    "devDependencies": {
+        "webpack": "^3.5.5"
+    }
+}

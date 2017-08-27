@@ -10,6 +10,7 @@ body {
   "nav    main   side  "
   "footer footer footer";
 }
+
 body > * {
   margin: 3px;
   padding: 10px;
