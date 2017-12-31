@@ -1,0 +1,79 @@
+// 追加
+// 削除
+// 編集(入力した内容の)
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        p {
+            margin: 0;
+        }
+        .content {
+            display: flex;
+            align-content: center;
+        }
+    </style>
+    <div id="app">
+        <div class="container">
+            <div class="create">
+                <input type="text" v-model="newtodo.title">
+                <button @click="createTodo()">追加</button>
+            </div>
+            <ul>
+                <li v-for="(todo, index) in todos" v-bind:key="index" class="content">
+                    <input type="checkbox" v-model="todo.done" @click="dropTodo(index)">
+                    <p>{{ todo.title }}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script type="text/javascript">
+        var app = new Vue({
+            el: "#app",
+            data: {
+                newtodo: {
+                    title: ''
+                },
+                todos: [
+                ]
+            },
+            mounted: function() {
+                this.getApiData().then(function(data) {
+                    app.todos = data
+                })
+            },
+            methods: {
+                getApiData () {
+                    return axios.get('/api/todo').then(function(res) {
+                        return res.data
+                    })
+                },
+                // クリック時の処理
+                createTodo: function() {
+                   this.todos.push({
+                       title: this.newtodo.title,
+                       done: false
+                   })
+                },
+                /**
+                 * Todoを削除する
+                 * @param {Number} index 配列のインデックスを受けとる
+                **/
+                dropTodo (index) {
+                    this.todos.splice(index, parseInt(index + 1))
+                }
+            }
+        })
+    </script>
+</body>
+</html>
