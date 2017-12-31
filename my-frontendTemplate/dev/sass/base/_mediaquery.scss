@@ -1,0 +1,31 @@
+//max-width(767px)->768までの端末
+$phone: "only screen and (min-width:768px)";
+$tablet: "only screen and (min-width:992px)";
+$pc: "only screen and (min-width:1200px)";
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+//(スマートフォン：幅768~991pxまで)
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+//(タブレット：幅992~1199pxまで)
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+//(デスクトップ：幅1200px以上)
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}

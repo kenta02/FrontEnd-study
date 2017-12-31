@@ -1,0 +1,23 @@
+// Good
+$color-red: red;
+$color-error: $color-red;
+
+.p-alert {
+    padding: 1em;
+    border: 1px solid #e7edf0;
+    border-radius: 3px;
+    color: #47525d;
+    background-color: #f7f9fa;
+}
+
+.p-alert--success {
+    border-color: #d9f4e1;
+    color: #2c683f;
+    background-color: #edfaf1;
+}
+
+.p-alert--error {
+    border-color: #ffcaca;
+    color: #921515;
+    background-color: #ffe3e3;
+}
