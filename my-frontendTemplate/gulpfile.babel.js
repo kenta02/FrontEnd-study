@@ -1,7 +1,5 @@
 "use strict";
 const gulp = require("gulp");
-// const runSequence = require("run-sequence"); //タスクの順次実行
-
 const sass = require("gulp-sass"); //cssコンパイル
 const autoprefixer = require("gulp-autoprefixer");
 require("es6-promise").polyfill();
@@ -30,7 +28,7 @@ gulp.task("ejs", () => {
     .pipe(rename({ extname: ".html" })) //拡張子をhtmlに
     .pipe(gulp.dest("dev/"))　//出力先
 
-       .pipe(browserSync.stream()); 
+       .pipe(browserSync.stream());
 });
 
 gulp.task("default", ["sass", "browser-sync", "ejs", "watch"]);
