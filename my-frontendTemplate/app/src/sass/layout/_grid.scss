@@ -1,0 +1,53 @@
+
+.l-wrapper{
+    width:100%;
+    overflow: hidden;
+    //position: relative;    デバイスによってバグが出るので削除
+}
+
+
+.l-container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.l-grid {
+    font-size: 0;
+    /* inline-blockによる隙間を埋める */
+}
+.l-inner{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.l-grid-item {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 10px;
+}
+
+.l-grid-col2>.l-list-item {
+    width: 50%;
+}
+
+.l-grid-col3>.l-list-item {
+    width: 33.3333%;
+}
+
+.l-grid-col4>.l-list-item {
+    width: 25%;
+}
+
+// 使用例
+// <ul class=“l-grid l-grid-col3“>
+//     <li class=“l-grid-item“>
+//         <img class=“thumbnail“ src=“...“ alt=“...“>
+//     </li>
+//     <li class=“l-grid-item“>
+//         <img class=“thumbnail“ src=“...“ alt=“...“>
+//     </li>
+//     <li class=“l-grid-item“>
+//         <img class=“thumbnail“ src=“...“ alt=“...“>
+//     </li>
+// </ul>

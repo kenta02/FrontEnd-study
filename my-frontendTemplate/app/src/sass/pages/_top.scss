@@ -1,0 +1,277 @@
+/*****
+*
+* Top Page(トップページ)メインコンテンツ
+*
+******/
+@import "module/mixin";
+
+
+
+
+//デバイスごとのバグを解除
+.main-visual-contents {
+  position: relative;
+}
+
+//メインビジュアルスライド
+.main-slidelist {
+  //@include clearfix;
+
+  & .pc {
+    display: block !important;
+  }
+  & .sp {
+    display: none !important;
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 640px) {
+  .main-slidelist {
+    & .pc {
+      display: none !important;
+    }
+    & .sp {
+      display: block !important;
+    }
+  }
+}
+
+/*
+*[トップページ]メインビジュアル・スライダーレイアウト
+*/
+.bx-wrapper {
+  margin: 0 !important;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  background: none !important;
+}
+
+.bxslider img, .slideshow img {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.bx-wrapper .bx-viewport {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  left: 0;
+  background-color: transparent;
+}
+
+.bxslider {
+  padding: 0;
+  margin: 0;
+}
+
+.bx-wrapper .bx-viewport {
+  text-align: left; /* 追加 */
+  -moz-box-shadow: 0 0 5px #ccc;
+  -webkit-box-shadow: 0 0 5px #ccc;
+  box-shadow: 0 0 5px #ccc;
+  -webkit-transform: translatez(0);
+  -moz-transform: translatez(0);
+  -ms-transform: translatez(0);
+  -o-transform: translatez(0);
+  transform: translatez(0);
+}
+
+.slider {
+  padding: 0 0 0 20px;
+}
+
+//レスポンシブ時はPC版のslider削除
+.slider-pc {
+  display: block;
+}
+
+.slider-sp {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+}
+
+//pc-instaicon
+.fa-large {
+  font-size: 16px;
+  color: #fff;
+}
+
+
+
+
+
+
+/*
+----------instagram--------------
+*/
+
+.insta_slideshow {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px 0;
+  opacity: .95;
+  background-color: #050203;
+  .insta_slideshow_inner {
+    position: relative;
+    width: 75%;
+    margin: 0 auto;
+    .itemList {
+      .insta-icon-pc {
+        position: absolute;
+        top: 0;
+        left: -58px;
+        p {
+
+        }
+      }
+      .slider {
+        .instaslideitems {
+          position: relative;
+          img {
+            font-family: 'object-fit: cover; object-position: center top;';
+            width: 70%;
+            height: 180px;
+            max-height: 180px;
+            object-fit: cover;
+            object-position: center top;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .insta_slideshow {
+    position: relative;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .insta_slideshow {
+    background-color: #000000;
+    padding: 0;
+    //slickスライダー対策
+    position: relative;
+    bottom: 0;
+    .insta_slideshow_inner {
+      width: 100%;
+    }
+    .itemList {
+      width: 100%;
+      padding: 0 0 40px 0;
+      @include clearfix;
+      & .instaslideitems {
+        & img {
+          float: left;
+          width: 33.3%;
+          padding: 0;
+          height: 100%;
+          @include clearfix;
+        }
+      }
+    }
+  }
+  .insta-icon-sp {
+    padding: 15px 0;
+    .mg-25 {
+      margin: 0 0 0 25px;
+    }
+  }
+
+  //レスポンシブ時はPC版のslider削除
+  .slider-pc {
+    display: none;
+  }
+  .slider-sp {
+    display: block;
+  }
+
+  .fa-large {
+    font-size: 100px;
+    color: #fff;
+  }
+
+}
+
+@media (max-width: 320px) {
+  .slideshow{
+    .slides{
+      .slideitems{
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+
+}
+
+
+/*
+----------instagram area end--------------
+*/
+
+
+
+
+
+/*
+----------Top page contents--------------
+*/
+
+.top-contents {
+  width: 100%;
+  //margin: 60px 0;
+  margin: 100px 0 60px 0;
+  .feature {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    .feature-list {
+      margin: 0 2%;
+      text-align: center;
+      width: 30%;
+      box-sizing: border-box;
+      .feature-title {
+        padding: 20px 0;
+      }
+      .feature-text {
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: left;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .top-contents{
+    .feature{
+      display: block;
+      .feature-list{
+        padding: 15px 0;
+        box-sizing: border-box;
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+

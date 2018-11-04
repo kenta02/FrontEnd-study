@@ -1,0 +1,96 @@
+
+@media screen and (max-width:768px) {
+
+  @media screen and (max-width: 768px) {
+
+    .js-l-header-navmenu {
+      position: fixed;
+      z-index: 1;
+      //right: 5px;
+      right: 2%;
+      top: 1%;
+      display: inline-block;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 50px;
+      height: 50px;
+      padding: 5px;
+      -webkit-transition: all .4s;
+      transition: all .4s;
+      span {
+        position: absolute;
+        top: 20%;
+        display: inline-block;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 40px;
+        height: 4px;
+        margin-top: 15px;
+        -webkit-transition: all .4s;
+        transition: all .4s;
+        border-radius: 4px;
+        background-color: #fff;
+        &:after {
+          display: inline-block;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          -webkit-transition: all .4s;
+          transition: all .4s;
+          color: #fff;
+        }
+        &:before {
+          //ハンバーガーアイコン2段目
+          display: inline-block;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          -webkit-transition: all .4s;
+          transition: all .4s;
+          color: #fff;
+          position: absolute;
+          top: 10px;
+          width: 40px;
+          height: 4px;
+          content: '';
+          -webkit-transform: rotate(0);
+          transform: rotate(0);
+          border-radius: 4px;
+          //background-color: #fff;
+          background-color: #fff;
+        }
+        &:after {
+          //ハンバーガーアイコン1段目
+          position: absolute;
+          top: -10px;
+          bottom: -8px;
+          width: 40px;
+          height: 4px;
+          content: '';
+          -webkit-transform: rotate(0);
+          transform: rotate(0);
+          border-radius: 4px;
+          background-color: #fff;
+        }
+      }
+      &.active span {
+        background: 0 0;
+        &:before {
+          top: 10px;
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+          background-color: #fff;
+        }
+        &:after {
+          top: 10px;
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+          background-color: #fff;
+        }
+      }
+    }
+
+  }
+
+
+
+}
+
