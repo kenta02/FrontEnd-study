@@ -8,7 +8,7 @@
 const gulp = require('gulp');
 
 
-gulp.task('copy', function() {
+gulp.task('copy', ()=> {
 	gulp.src(['app/src/images/**'])
 		.pipe(gulp.dest('app/product/images'));
 });
