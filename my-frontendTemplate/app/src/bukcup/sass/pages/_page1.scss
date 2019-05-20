@@ -1,0 +1,21 @@
+.about-visual{
+  position:relative;
+}
+.top-headline{
+  position:absolute;
+  top:50%;
+  left:10%;
+  color:#ffffff;
+  font-size: 2.5em;
+}
+
+.main-contents{
+  padding:100px;
+  text-align: center;
+
+}
+@media screen and (max-width:640px){
+  .top-headline{
+    font-size: 1.6em;
+  }
+}

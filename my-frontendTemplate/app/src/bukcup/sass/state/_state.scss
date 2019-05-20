@@ -1,0 +1,29 @@
+.is-active {
+    display: block;
+}
+
+.is-hidden {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px){
+    .is-active {
+        display: block;
+    }
+    .is-hidden {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .is-active {
+        display: block;
+    }
+
+    .is-hidden {
+        display: none;
+    }
+
+}
+
